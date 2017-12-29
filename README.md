@@ -4,3 +4,7 @@ Algorithms and Big O Analysis, Recursion, Sorting, Data Structures and Functiona
 ref: 
 * https://btholt.github.io/four-semesters-of-cs/
 * https://frontendmasters.com/courses/computer-science/recursion-example
+
+# tests
+
+`yarn test Recursion/index.js`
