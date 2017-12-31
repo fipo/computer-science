@@ -9,7 +9,7 @@
   swapping their places if the smaller index's value is larger than the larger
   index's. Continue looping through until all values are in ascending order
 */
-function bubbleSort1(nums) {
+function bubbleSort(nums) {
   let swapped
   do {
     swapped = false;
@@ -25,17 +25,4 @@ function bubbleSort1(nums) {
 }
 //Big O is n squared 
 
-// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort
-function bubbleSort2(nums) {
-  nums.sort((a, b) => a - b);
-}
-
-// unit tests
-// do not modify the below code
-describe("bubble sort", function() {
-  it("should sort correctly", () => {
-    var nums = [10, 5, 3, 8, 2, 6, 4, 7, 9, 1];
-    bubbleSort1(nums);
-    expect(nums).toEqual([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]);
-  });
-});
+module.exports = bubbleSort

@@ -5,6 +5,9 @@ ref:
 * https://btholt.github.io/four-semesters-of-cs/
 * https://frontendmasters.com/courses/computer-science/recursion-example
 
+more:
+* https://github.com/benoitvallon/computer-science-in-javascript
+
 # tests
 
-`yarn test Recursion/index.js`
+`yarn test`

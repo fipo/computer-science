@@ -14,7 +14,7 @@ function insertionSort(nums) {
     for (let j = 0; j < i; j++) {
       insertionSortCount++;
       if (nums[i] < nums[j]) {
-        console.log(nums);
+        // console.log(nums);
         // console.log(insertionSortCount);
         // The splice() method changes the contents of an array by removing existing elements and/or adding new elements.
         // remove 1 item at i-index position
@@ -24,15 +24,7 @@ function insertionSort(nums) {
       }
     }
   }
-  console.log(insertionSortCount);
+  // console.log(insertionSortCount);
 }
 
-// unit tests
-// do not modify the below code
-describe("insertion sort", function() {
-  it("should sort correctly", () => {
-    var nums = [10, 5, 3, 8, 2, 6, 4, 7, 9, 1];
-    insertionSort(nums);
-    expect(nums).toEqual([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]);
-  });
-});
+module.exports = insertionSort;
