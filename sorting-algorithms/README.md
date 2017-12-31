@@ -6,11 +6,13 @@ Compare two numbers at the time and swap them if they are out of order.
 
 more: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort
 
-`[5,7,6,4]`
-`[5,6,7,4]`
-`[5,6,4,7]`
-`[5,4,6,7]`
-`[4,5,6,7]`
+```
+[5,7,6,4]
+[5,6,7,4]
+[5,6,4,7]
+[5,4,6,7]
+[4,5,6,7]
+```
 
 > What's the Big O on this? Well, there's an inner loop to check to see if indexes need to be swapped, and an outer loop that's just checking to see if anything was swapped. That would be make it O(n²). Not efficient ...
 
@@ -50,5 +52,37 @@ MergeSort's Big O is O(n log n). Weird, right? We obviously have to compare ever
 MergeSort's space complexity is a bit worse than the previous algorithms at O(n) since we have to create new lists as we go. It's not awful but it nonetheless a consideration.
 
 
-
 https://www.youtube.com/watch?v=KF2j-9iSf4Q
+
+## Quick Sort
+
+Quicksort is one of the most useful and powerful sorting algorithms out there.
+
+It's another recursive algorithm but it takes a slightly different approach.
+
+The basic gist is that you take the last element in the list and call that the pivot.
+Everything that's smaller than the pivot gets put into a "left" list and everything that's greater get's put in a "right" list. 
+You then call quick sort on the left and right lists independently (hence the recursion.) After those two sorts come back, you concatenate the sorted left list, the pivot, and then the right list (in that order.) The base case is when you have a list of length 1 or 0, where you just return the list given to you.
+
+Another Big O of O(n log n) but takes up less memory than mergesort so it is often favored.
+
+```
+[4,9,3,5] list
+-> 5 is made the pivot since it's the last in the array
+-> divide list into two lists, [4,3] and [9]
+-> call quicksort on those two lists
+
+[4, 3]
+-> 3 is pivot
+-> call quicksort on [] and [4]
+-> those both return as is as they are the base case of length 0 or 1
+-> concat [], 3, and [4]
+-> return [3,4]
+
+[9]
+-> returns as this it is a base case of length 1
+
+(back into the original function call)
+-> call concat on [3,4], 5, and [9]
+-> return [3,4,5,9]
+```
